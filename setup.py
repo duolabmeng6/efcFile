@@ -1,10 +1,13 @@
 from setuptools import setup, find_packages
+
+
 def install_requires():
     try:
         with open("requirements.txt", encoding='utf-8') as f:
             return [line.strip() for line in f.readlines() if line.strip()]
     except OSError:
         return []
+
 
 setup(
     name='efcFile',
