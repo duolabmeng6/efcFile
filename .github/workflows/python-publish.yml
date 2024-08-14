@@ -1,9 +1,15 @@
 name: publish to PyPI
 
 on:
+  workflow_dispatch:
   push:
-    branches:
-      - main
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.yml'
+      - .gitignore
+      - .editorconfig
+
+permissions: write-all # 给所有工作写权限
 #  release:
 #    types: [created]
 
