@@ -1,16 +1,16 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='efcFile',  # 包名, 在PyPI上唯一
-    version='0.1.0',  # 初始版本号
+    name='efcFile',
+    version='0.1.1',
     description='A file storage management package supporting various providers like S3, OSS, and Qiniu.',
-    long_description=open('README.md').read(),  # 从 README.md 中读取包的详细描述
-    long_description_content_type='text/markdown',  # README文件的类型
+    long_description=open('README.md').read(),  #
+    long_description_content_type='text/markdown',
     author='duolabmeng6',
     author_email='1715109585@qq.com',
-    url='https://github.com/duolabmeng6/efcFile',  # 项目主页
-    packages=find_packages(),  # 自动查找包内所有的模块
-    install_requires=[  # 项目的依赖包列表
+    url='https://github.com/duolabmeng6/efcFile',
+    packages=find_packages(),
+    install_requires=[
         'boto3',
         'oss2',
         'qiniu',
