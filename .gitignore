@@ -11,3 +11,4 @@ __pycache__
 *_test.rst
 .idea
 .DS_Store
+/efcFile.egg-info
