@@ -53,8 +53,12 @@ jobs:
           echo "${{ steps.create_body.outputs.Body }}"
 
   deploy:
+    name: 发布到pypi
     needs: [ jobs_v ]
     runs-on: ubuntu-latest
+    env:
+      version: ${{ needs.jobs_v.outputs.version }}
+      body: ${{ needs.jobs_v.outputs.Body }}
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
