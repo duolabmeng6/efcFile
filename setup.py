@@ -1,5 +1,13 @@
 from setuptools import setup, find_packages
 
+def install_requires():
+    try:
+        with open("requirements.txt", encoding='utf-8') as f:
+            return [line.strip() for line in f.readlines() if line.strip()]
+    except OSError:
+        return []
+
+
 setup(
     name='efcFile',
     version="0.0.0",
@@ -10,12 +18,7 @@ setup(
     author_email='1715109585@qq.com',
     url='https://github.com/duolabmeng6/efcFile',
     packages=find_packages(),
-    install_requires=[
-        'oss2',
-        'qiniu',
-        'boto3',
-        'requests'
-    ],
+    install_requires=install_requires(),
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
