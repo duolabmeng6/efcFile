@@ -3,7 +3,7 @@ name: publish to PyPI
 on:
   push:
     branches:
-      - master
+      - main
 #  release:
 #    types: [created]
 
