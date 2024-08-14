@@ -1,4 +1,4 @@
-from .interfaces.FileStorageInterface import FileStorageInterface
+# from .interfaces.FileStorageInterface import FileStorageInterface
 from .managers.FileStorageManager import FileStorageManager
 from .providers.LocalFileStorage import LocalFileStorage
 from .providers.S3FileStorage import S3FileStorage
