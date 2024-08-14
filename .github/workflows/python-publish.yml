@@ -66,12 +66,11 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: 生成 Version.go 文件
+      - name: 生成版本号
         shell: bash
         run: |
-          echo ${{ format('version {0}', env.version ) }} # 版本号
-          echo -e "version = \"${version}\"" > version.py
-          cat version.py
+          python run_output_version.py
+          cat setup.py
 
       - name: Install dependencies
         run: |
