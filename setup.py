@@ -1,8 +1,9 @@
 from setuptools import setup, find_packages
+import version
 
 setup(
     name='efcFile',
-    version='0.1.1',
+    version=version.version,
     description='A file storage management package supporting various providers like S3, OSS, and Qiniu.',
     long_description=open('README.md').read(),  #
     long_description_content_type='text/markdown',
